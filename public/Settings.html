@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Chat Box</title>
-</head>
-<body>
-<style>
-    
-
-*, ::after, ::before {
+<meta charset="UTF-8">
+    <meta name="viewport"="width=devicewidth, initial-=1.0">
+  <title>Settings</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    *,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -25,15 +24,16 @@ h1 {
   font-size: 23px;
 }
 
-
 .chatbox {
   width: 800px;
   padding: 64px 15px 24px;
   margin: 0 auto;
 }
+
 .chatbox .control {
   margin: 0 0 24px;
 }
+
 .chatbox .control input {
   width: 100%;
   padding: 14px 16px;
@@ -44,13 +44,16 @@ h1 {
   letter-spacing: 0.05em;
   font-size: 16px;
 }
+
 .chatbox .control input[name='response'] {
   width: 800px !important;
   height: 300px;
   padding: 14px 16px;
   font-size: 16px;
 }
-.chatbox .control input:hover, .chatbox .control input:focus {
+
+.chatbox .control input:hover,
+.chatbox .control input:focus {
   outline: none;
   border: 0;
 }
@@ -58,9 +61,8 @@ h1 {
 .btn-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Add this line to align the buttons with the edges */
+  justify-content: space-between;
 }
-
 
 .chatbox .btn {
   flex: 1;
@@ -83,6 +85,7 @@ h1 {
 .block-cube {
   position: relative;
 }
+
 .block-cube .bg-top {
   position: absolute;
   height: 10px;
@@ -94,9 +97,11 @@ h1 {
   transform: skew(-45deg, 0);
   margin: 0;
 }
+
 .block-cube .bg-top .bg-inner {
   bottom: 0;
 }
+
 .block-cube .bg {
   position: absolute;
   left: 0;
@@ -106,6 +111,7 @@ h1 {
   background: #020024;
   background: linear-gradient(90deg, #020024 0%, #340979 37%, #00d4ff 94%);
 }
+
 .block-cube .bg-right {
   position: absolute;
   background: #020024;
@@ -117,12 +123,15 @@ h1 {
   left: 100%;
   transform: skew(0, -45deg);
 }
+
 .block-cube .bg-right .bg-inner {
   left: 0;
 }
+
 .block-cube .bg .bg-inner {
   transition: all 0.2s ease-in-out;
 }
+
 .block-cube .bg-inner {
   background: #212121;
   position: absolute;
@@ -131,36 +140,47 @@ h1 {
   right: 2px;
   bottom: 2px;
 }
+
 .block-cube .text {
   position: relative;
   z-index: 2;
 }
+
 .block-cube.block-input input {
   position: relative;
   z-index: 2;
 }
-.block-cube.block-input input:focus ~ .bg-right .bg-inner, .block-cube.block-input input:focus ~ .bg-top .bg-inner, .block-cube.block-input input:focus ~ .bg-inner .bg-inner {
+
+.block-cube.block-input input:focus ~ .bg-right .bg-inner,
+.block-cube.block-input input:focus ~ .bg-top .bg-inner,
+.block-cube.block-input input:focus ~ .bg-inner .bg-inner {
   top: 100%;
   background: rgba(255, 255, 255, 0.5);
 }
+
 .block-cube.block-input .bg-top,
 .block-cube.block-input .bg-right,
 .block-cube.block-input .bg {
   background: rgba(255, 255, 255, 0.5);
   transition: background 0.2s ease-in-out;
 }
+
 .block-cube.block-input .bg-right .bg-inner,
 .block-cube.block-input .bg-top .bg-inner {
   transition: all 0.2s ease-in-out;
 }
+
 .block-cube.block-input:focus .bg-top,
 .block-cube.block-input:focus .bg-right,
-.block-cube.block-input:focus .bg, .block-cube.block-input:hover .bg-top,
+.block-cube.block-input:focus .bg,
+.block-cube.block-input:hover .bg-top,
 .block-cube.block-input:hover .bg-right,
 .block-cube.block-input:hover .bg {
   background: rgba(255, 255, 255, 0.8);
 }
-.block-cube.block-cube-hover:focus .bg .bg-inner, .block-cube.block-cube-hover:hover .bg .bg-inner {
+
+.block-cube.block-cube-hover:focus .bg .bg-inner,
+.block-cube.block-cube-hover:hover .bg .bg-inner {
   top: 100%;
 }
 
@@ -172,25 +192,28 @@ h1 {
   width: 100%;
   z-index: 111;
 }
+
 .credits a {
   opacity: 0.6;
   color: #fff;
   font-size: 11px;
   text-decoration: none;
 }
+
 .credits a:hover {
   opacity: 1;
 }
+
 .footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   display: flex;
-  justify-content: space-around; /* Adjust as per your preference */
+  justify-content: space-around;
   align-items: center;
-  background-color: #333; /* Add your desired background color */
-  color: #fff; /* Add your desired text color */
+  background-color: #333;
+  color: #fff;
 }
 
 .footer a {
@@ -205,17 +228,18 @@ h1 {
 .footer a:hover {
   opacity: 1;
 }
-</style>
-
+  </style>
+</head>
 <body>
-<form autocomplete='off' class='chatbox'>
+  <form autocomplete='off' class='chatbox'>
     <div class='control'>
       <h1>
-        Chat Box
+        Settings
       </h1>
     </div>
     <div class='control block-cube block-input'>
-      <input name='response' placeholder='AI response' type='text'>
+      <!-- Replace the input with different setting options -->
+      <input name='setting1' placeholder='Setting 1' type='text'>
       <div class='bg-top'>
         <div class='bg-inner'></div>
       </div>
@@ -227,7 +251,8 @@ h1 {
       </div>
     </div>
     <div class='control block-cube block-input'>
-      <input name='message' placeholder='Type a message' type='text'>
+      <!-- Replace the input with different setting options -->
+      <input name='setting2' placeholder='Setting 2' type='text'>
       <div class='bg-top'>
         <div class='bg-inner'></div>
       </div>
@@ -238,56 +263,60 @@ h1 {
         <div class='bg-inner'></div>
       </div>
     </div>
-  <div class="btn-container">
-    <button class='btn block-cube block-cube-hover' type='button'>
-      <div class='bg-top'>
-        <div class='bg-inner'></div>
-      </div>
-      <div class='bg-right'>
-        <div class='bg-inner'></div>
-      </div>
-      <div class='bg'>
-        <div class='bg-inner'></div>
-      </div>
-      <div class='text'>
-        Send
-      </div>
-    </button>
-    <button class='btn block-cube block-cube-hover' type='button'>
-      <div class='bg-top'>
-        <div class='bg-inner'></div>
-      </div>
-      <div class='bg-right'>
-        <div class='bg-inner'></div>
-      </div>
-      <div class='bg'>
-        <div class='bg-inner'></div>
-      </div>
-      <div class='text'>
-        Searhc
-      </div>
-    </button>
-    <button class='btn block-cube block-cube-hover' type='button'>
-      <div class='bg-top'>
-        <div class='bg-inner'></div>
-      </div>
-      <div class='bg-right'>
-        <div class='bg-inner'></div>
-      </div>
-      <div class='bg'>
-        <div class='bg-inner'></div>
-      </div>
-      <div class='text'>
-        New Chat
-      </div>
-    </button>
-  </div>
-  <div class='footer'>
+    <div class="btn-container">
+      <button class='btn block-cube block-cube-hover' type='button'>
+        <!-- Modify the button text to represent a setting action -->
+        <div class='bg-top'>
+          <div class='bg-inner'></div>
+        </div>
+        <div class='bg-right'>
+          <div class='bg-inner'></div>
+        </div>
+        <div class='bg'>
+          <div class='bg-inner'></div>
+        </div>
+        <div class='text'>
+          Save
+        </div>
+      </button>
+      <button class='btn block-cube block-cube-hover' type='button'>
+        <!-- Modify the button text to represent a setting action -->
+        <div class='bg-top'>
+          <div class='bg-inner'></div>
+        </div>
+        <div class='bg-right'>
+          <div class='bg-inner'></div>
+        </div>
+        <div class='bg'>
+          <div class='bg-inner'></div>
+        </div>
+        <div class='text'>
+          Reset
+        </div>
+      </button>
+      <button class='btn block-cube block-cube-hover' type='button'>
+        <!-- Modify the button text to represent a setting action -->
+        <div class='bg-top'>
+          <div class='bg-inner'></div>
+        </div>
+        <div class='bg-right'>
+          <div class='bg-inner'></div>
+        </div>
+        <div class='bg'>
+          <div class='bg-inner'></div>
+        </div>
+        <div class='text'>
+          Cancel
+        </div>
+      </button>
+    </div>
+    <div class='footer'>
+      <!-- Update the footer links to reflect settings-related pages -->
       <div class='Home'>
-        <a href='chat.html' target='_blank'>Home</a>
+        <a href='home.html' target='_blank'>Home</a>
       </div>
       <div class='Settings'>
-        <a href='settings.html' target='_blank'>Settings</a>
+        <a href='settings.html' target='_blank'>Settings</a> <!-- Current page should be active -->
       </div>
       <div class='Account'>
         <a href='account.html' target='_blank'>Account</a>
@@ -295,18 +324,10 @@ h1 {
       <div class='API'>
         <a href='API.html' target='_blank'>API</a>
       </div>
-      <div class='Legual'>
-        <a href='Legual.html' target='_blank'>Legual</a>
+      <div class='Legal'>
+        <a href='legal.html' target='_blank'>Legal</a> <!-- Updated spelling to "Legal" -->
       </div>
-    </div>
-    <p id="usernameDisplay">UserSession, Loading...</p>
-<script>
-  fetch('/get-username') // Example endpoint to retrieve the username
-    .then(response => response.text())
-    .then(username => {
-      document.getElementById('usernameDisplay').textContent = `UserSession, ${username}`;
-    });
-    
-</script>
-  </form>
-</body>
+    </div>  
+  </form>  
+</body>  
+</html>  
