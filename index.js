@@ -4,7 +4,7 @@ const app = express();
 
 // Redirect the root path to "register.html"
 app.get('/', (req, res) => {
-  res.redirect('/register.html');
+  res.redirect('public/register.html');
 });
 
 module.exports = app;
