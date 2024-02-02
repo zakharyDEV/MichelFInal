@@ -1,12 +1,7 @@
-// index.js
 const express = require('express');
 const app = express();
 
-// Redirect the root path to "register.html"
-app.get('/', (req, res) => {
-  res.redirect('register.html');
-});
-
+// Serve static files from the "public" directory
 app.use(express.static('public'));
 
 module.exports = app;
